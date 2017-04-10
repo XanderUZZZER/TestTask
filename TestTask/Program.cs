@@ -25,8 +25,8 @@ namespace TestTask
                 Cities[i].Populatin = int.Parse(string2[1]);
             }
 
-            int LongestCityNameIndex = 0;
-            int LongestCityName = Cities[0].Name.Length;
+            int LongestNameIndex = 0;
+            int LongestName = Cities[0].Name.Length;
             int MostPopulatedIndex = 0;
             int MaxPopulation = Cities[0].Populatin;
 
@@ -37,14 +37,14 @@ namespace TestTask
                     MostPopulatedIndex = i;
                     MaxPopulation = Cities[i].Populatin;
                 }
-                if (Cities[i].Name.Length > LongestCityName)
+                if (Cities[i].Name.Length > LongestName)
                 {
-                    LongestCityNameIndex = i;
-                    LongestCityName = Cities[i].Name.Length;
+                    LongestNameIndex = i;
+                    LongestName = Cities[i].Name.Length;
                 }
             }
             Console.WriteLine($"Most populated: {Cities[MostPopulatedIndex].Name} with {Cities[MostPopulatedIndex].Populatin}");
-            Console.WriteLine($"Longest name: {Cities[LongestCityNameIndex].Name} ({Cities[LongestCityNameIndex].Name.Length} letters)");
+            Console.WriteLine($"Longest name: {Cities[LongestNameIndex].Name} ({Cities[LongestNameIndex].Name.Length} letters)");
             Console.ReadLine();
         }
 
