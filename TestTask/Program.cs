@@ -12,17 +12,17 @@ namespace TestTask
         {
             Console.WriteLine("Input string");
 
-            string temp = "Kharkiv=1431000, Kiev=2804000,LasVegas=630211";
+            string temp = "Kharkiv=1431000, Kiev=2804000,Las Vegas=630211";
+            string[] splittedString1 = temp.Split(',');  
+                      
+            City[] Cities = new City[splittedString1.Length];
 
-            string[] string1 = temp.Split(',');            
-            City[] Cities = new City[string1.Length];
-
-            string[] string2;
-            for (int i = 0; i < string1.Length; i++)
+            string[] splittedString2;
+            for (int i = 0; i < splittedString1.Length; i++)
             {
-                string2 = string1[i].Split('=');
-                Cities[i].Name = string2[0];
-                Cities[i].Populatin = int.Parse(string2[1]);
+                splittedString2 = splittedString1[i].Split('=');
+                Cities[i].Name = splittedString2[0];
+                Cities[i].Populatin = int.Parse(splittedString2[1]);
             }
 
             int LongestNameIndex = 0;
