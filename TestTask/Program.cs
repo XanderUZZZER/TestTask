@@ -30,7 +30,7 @@ namespace TestTask
             int MostPopulatedIndex = 0;
             int MaxPopulation = Cities[0].Populatin;
 
-            for (int i = 0; i < Cities.Length; i++)
+            for (int i = 1; i < Cities.Length; i++)
             {
                 if (Cities[i].Populatin > MaxPopulation)
                 {
